@@ -1,6 +1,6 @@
 # git-pushit
 git() {
-    AUDIO_FILE="./audio/pushit.mp3"
+    AUDIO_FILE="../audio/pushit.mp3"
     if [[ "$1" == "push" ]]; then
         # Play the audio file before actually running git push
         case "$(uname -s)" in
