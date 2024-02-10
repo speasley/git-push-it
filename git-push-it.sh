@@ -1,6 +1,6 @@
 # git-pushit
 git() {
-    AUDIO_FILE="~/.dotfiles/audio/push-it.mp3"  # Ensure this path is correctly relative to where you'll be calling git from
+    AUDIO_FILE="/Users/speasley/.dotfiles/audio/push-it.mp3"  # Ensure this path is correctly relative to where you'll be calling git from
     if [[ "$1" == "push" ]]; then
         # Play the audio file before actually running git push
         case "$(uname -s)" in
