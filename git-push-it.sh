@@ -2,7 +2,6 @@
 git() {
     AUDIO_FILE="$HOME/.dotfiles/audio/push-it.mp3"
     if [[ "$1" == "push" ]]; then
-        # Play the audio file before actually running git push
         case "$(uname -s)" in
             Linux*)
                 play_audio_linux ;;
@@ -14,7 +13,6 @@ git() {
                 echo "Unsupported OS. Sorry." ;;
         esac
     fi
-    # Now, run the actual git command with all passed arguments
     command git "$@"
 }
 
