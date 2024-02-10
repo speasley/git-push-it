@@ -12,3 +12,11 @@ Spice up your Git pushes with a little little six-note tribute to Salt-N-Pepa. N
 1. Set the audio file permissions: `chmod 644 /path/to/your/audio/file.mp3`.
 1. Save the file and reload your shell configuration (e.g., by running source ~/.bashrc).
 
+## Push it real good
+
+You are provided with two audio files: `push-it.mp3` and `push-it--extended.mp3`. You can use whatever audio you like but these push it real good.
+
+## Did you know?
+
+Salt-N-Pepa's album _Hot, Cool & Vicious_ was certified platinum in the US, making them the first female rap act to have a certified gold or platinum album.
+
