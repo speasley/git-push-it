@@ -29,7 +29,6 @@ play_audio_linux() {
 }
 
 play_audio_mac() {
-    echo "Oooh, baby, baby: $AUDIO_FILE"
     afplay "$AUDIO_FILE"
 }
 
