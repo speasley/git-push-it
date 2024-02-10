@@ -6,10 +6,8 @@ Spice up your Git pushes with a little little six-note tribute to Salt-N-Pepa. N
 
 ## Git up on this
 
-1. Make the installation script executable: `chmod +x install.sh`.
-1. Now run install.sh and you're real good.
+1. Open your shell's profile file (e.g., ~/.bashrc, ~/.bash_profile for Bash, or ~/.zshrc for Zsh) in a text editor.
+1. Copy and paste the contents of git-push-it.sh into your profile file.
+1. Replace "/path/to/your/audio/file.mp3" with the actual path to your audio file.
+1. Save the file and reload your shell configuration (e.g., by running source ~/.bashrc).
 
-## Git on out of this
-
-1. Make the uninstallation script executable: `chmod +x uninstall.sh`.
-1. Now run uninstall.sh and you're less spicy again.
