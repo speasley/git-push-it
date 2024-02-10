@@ -29,6 +29,7 @@ play_audio_linux() {
 }
 
 play_audio_mac() {
+    echo "Attempting to play audio file from $AUDIO_FILE"
     afplay "$AUDIO_FILE"
 }
 
