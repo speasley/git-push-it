@@ -1,4 +1,4 @@
-# git-pushit
+# git-push-it
 git() {
     AUDIO_FILE="$HOME/.dotfiles/audio/push-it.mp3"
     if [[ "$1" == "push" ]]; then
