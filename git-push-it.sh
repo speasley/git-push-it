@@ -1,12 +1,14 @@
 # git-pushit
 git() {
-    AUDIO_FILE="../audio/pushit.mp3"
+    AUDIO_FILE="../audio/pushit.mp3"  # Ensure this path is correctly relative to where you'll be calling git from
     if [[ "$1" == "push" ]]; then
         # Play the audio file before actually running git push
         case "$(uname -s)" in
-            Linux*)     play_audio_linux ;;
-            Darwin*)    play_audio_mac ;;
-            CYGWIN*|MINGW32*|MSYS*|MINGW*) 
+            Linux*)
+                play_audio_linux ;;
+            Darwin*)
+                play_audio_mac ;;
+            CYGWIN*|MINGW32*|MSYS*|MINGW*)
                 play_audio_windows ;;
             *)
                 echo "Unsupported OS. Sorry." ;;
@@ -18,18 +20,18 @@ git() {
 
 play_audio_linux() {
     if command -v mpg123 >/dev/null 2>&1; then
-        mpg123 AUDIO_FILE
+        mpg123 "$AUDIO_FILE"
     elif command -v aplay >/dev/null 2>&1; then
-        aplay AUDIO_FILE
+        aplay "$AUDIO_FILE"
     else
         echo "Sorry, no compatible Linux audio player was found."
     fi
 }
 
 play_audio_mac() {
-    afplay AUDIO_FILE
+    afplay "$AUDIO_FILE"
 }
 
 play_audio_windows() {
-    powershell -c "(New-Object Media.SoundPlayer AUDIO_FILE).PlaySync();"
+    powershell -c "(New-Object Media.SoundPlayer \"$AUDIO_FILE\").PlaySync();"
 }
