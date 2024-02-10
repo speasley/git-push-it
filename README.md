@@ -2,7 +2,7 @@
 
 ## Oooh, baby, baby
 
-Spice up your Git pushes with a little little six-note tribute to Salt-N-Pepa. Now push it good.
+Spice up your Git pushes with a little six-note tribute to Salt-N-Pepa. Now push it good.
 
 ## Git up on this
 
