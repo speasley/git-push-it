@@ -1,7 +1,13 @@
 # git-push-it
 git() {
     AUDIO_FILE="$HOME/.dotfiles/audio/push-it.mp3"
-    if [[ "$1" == "push" ]]; then
+    
+    # Execute the git command first
+    command git "$@"
+    local git_exit_code=$?
+    
+    # Play audio only if there was a successful push
+    if [[ "$1" == "push" && $git_exit_code -eq 0 ]]; then
         case "$(uname -s)" in
             Linux*)
                 play_audio_linux ;;
@@ -13,7 +19,9 @@ git() {
                 echo "Unsupported OS. Sorry." ;;
         esac
     fi
-    command git "$@"
+    
+    # Return the original git exit code
+    return $git_exit_code
 }
 
 play_audio_linux() {
